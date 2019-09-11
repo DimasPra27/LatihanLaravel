@@ -8,7 +8,7 @@
 </head>
 <body>
     <h2>Data Pegawai</h2>
-    <a href="/index/add"> + Tambah Pegawai </a>
+    <a href="/pegawai/tambah"> + Tambah Pegawai </a>
     <hr>
 
     <table border = "1" >
@@ -26,11 +26,11 @@
             <td>{{ $peg->pegawai_umur }}</td>
             <td>{{ $peg->pegawai_Email }}</td>
             <td>
-                <a href="/index/update">Update</a>
-                <a href="/index/delete">Delete</a>
+                <a href="/pegawai/edit/{{ $peg->pegawai_id }}">Edit</a>
+                <a href="/pegawai/delete/{{ $peg->pegawai_id }}">Delete</a>
             </td>
         </tr>
         @endforeach
     </table>
-</body>
-</html>
+    </body>
+    </html>

@@ -43,3 +43,8 @@ Route::get('/blog/Kontak','BlogController@Contact');
 
 //get data from dataBase
 Route::get('/pegawai','PegawaiController@index');
+Route::get('/pegawai/tambah','PegawaiController@tambah');
+Route::post('/pegawai/store','PegawaiController@store');
+Route::get('/pegawai/edit/{id}','PegawaiController@edit');
+ROute::post('/pegawai/update','PegawaiController@update');
+Route::get('/pegawai/delete/{id}','PegawaiController@delete');
