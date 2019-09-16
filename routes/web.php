@@ -46,5 +46,9 @@ Route::get('/pegawai','PegawaiController@index');
 Route::get('/pegawai/tambah','PegawaiController@tambah');
 Route::post('/pegawai/store','PegawaiController@store');
 Route::get('/pegawai/edit/{id}','PegawaiController@edit');
-ROute::post('/pegawai/update','PegawaiController@update');
+Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/delete/{id}','PegawaiController@delete');
+
+Route::get('/testApi','ApiController@index');
+Route::get('/formApi','ApiController@form');
+Route::POST('/ApiPost','ApiController@insert');
