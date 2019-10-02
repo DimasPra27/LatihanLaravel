@@ -12,9 +12,18 @@ class PegawaiController extends Controller
     {
         //menagmbil dara dari table pegawai
         $pegawai = DB::table('pegawai')->get();
+    
+        $result = json_encode($pegawai, JSON_PRETTY_PRINT);
+
+        //echo $pegawai;
+        echo '<pre>';
+        echo $result;
+        echo '</pre>';
+        
+        //return response()->json($result, 200, ['Content-type' => 'application/json; charset=utf-8'],JSON_UNESCAPED_UNICODE);
 
         // mengirim data pegawai ke view
-        return view('index',['pegawai' => $pegawai]);
+        //return view('index',['pegawai' => $pegawai]);
     }
 
     public function tambah()

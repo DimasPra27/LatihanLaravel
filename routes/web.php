@@ -15,8 +15,10 @@
 //     return view('welcome');
 // });
 
+Route::get('/','PegawaiController@index');
+
 Route::get('/',function(){
-    return view('MasterBlog');
+    return view('login');
 });
 
 Route::get('Test', function(){

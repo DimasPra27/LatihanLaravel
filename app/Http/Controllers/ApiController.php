@@ -28,7 +28,7 @@ class ApiController extends Controller
   
         return view('TestApi',['data' => $Result]);   
     }
-
+    
     public function form()
     {
         return view('ApiPost');
@@ -42,12 +42,12 @@ class ApiController extends Controller
 
         $ch = curl_init($url);
 
-        $data = array(
-            'title' => $request->title,
-            'content' => $request->content
-        );  
-        //$payload = array("Data" => $data);
-        $payload = "title=" + $request->title + "&content=" + $request->content;
+        // $data = array(
+        //     'title' => $request->title,
+        //     'content' => $request->content
+        // );  
+        // $payload = array("Data" => $data);
+        $payload = "title=" . $request->title . "&content=" . $request->content;
 
         //attach encoded JSON string to the POST fields
         curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
